@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+
+<!-- 		producao RS -->
+		<property name="hibernate.connection.url">jdbc:postgresql://sema_ex.pgsql14-gbd.pro.intra.rs.gov.br:5432/sema</property>  
+ 		<property name="hibernate.connection.username">sema</property>
+ 		<property name="hibernate.connection.password">sema0854</property>
+
+<!-- 		local RS -->
+<!-- 		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/sema</property> -->
+<!-- 		<property name="hibernate.connection.username">postgres</property> -->
+<!-- 		<property name="hibernate.connection.password">postgres</property> -->
+
+		<property name="hibernate.current_session_context_class">thread</property>
+
+
+		<property name="hibernate.c3p0.acquire_increment">5</property>
+		<property name="hibernate.c3p0.idle_test_period">1000</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">50</property>
+		<property name="hibernate.c3p0.timeout">1000</property>
+		<property name="hibernate.c3p0.max_statements">0</property>
+		<property name="hibernate.c3p0.idleConnectionTestPeriod">100</property>
+		<property name="hibernate.c3p0.automaticTestTable">C3P0TESTCONNECTION</property> 
+
+		<property name="hibernate.search.autoregister_listeners">false</property>
+		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.format_sql">true</property>
+
+		<mapping class="br.com.conob.mtrintegracao.entity.ManifestoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.ManifestoDareEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.RegiaoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.ManifestoItemEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.MunicipioEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoUnidadeEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.CepEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.EnderecoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoResiduo2Entity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.EstadoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoResiduo1Entity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoResiduo3Entity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoAcondicionamentoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoPessoaEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.PessoaEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoClasseEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoEstadoFisicoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.SituacaoDeclaracaoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.SituacaoManifestoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoCondicaoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoTecnologiaDestinacaoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.DeclaracaoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.DeclaracaoItemEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoDestinacaoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.AjudaEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.RecebimentoManifestoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.RegionalEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.EstadoFisicoTipoAcondicionamentoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TemplateEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TemplateItemEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.AdministradorEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.ManifestoProvisorioEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.ManifestoComplementarEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.PerguntaFrequenteEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.CertificadoDestinacaoFinalEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.CertificadoDestinacaoItemEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.PaisEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.PessoaBloqueadaEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.AjudaTecnicoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.CertificadoDestinacaoFinalAuxEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.RegistroAlteracaoEmailEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.AlterarRecebimentoManifestoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.ResponsavelRecebimentoMtrEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TransportadorPlacaVeiculoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoDeclaracaoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.UsuarioEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.MenuEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.TipoPessoaMenuEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.PessoaAnexoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.SolicitacaoRestEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.ServicoRestEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.ManifestoWSEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.ManifestoItemWSEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.FilaIntegracaoEntity" />
+		<mapping class="br.com.conob.mtrintegracao.entity.UrlWsNacionalEntity" />
+	</session-factory>
+</hibernate-configuration>
